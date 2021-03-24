@@ -1,0 +1,16 @@
+<div class="col-md-8 offset-md-1">
+  		<h2>Book detail</h2>
+  		<table class="table">
+  		  <tbody><tr>
+          <td>
+            <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no-image-icon.jpg" %><br>
+         </td>
+          <td><%= link_to book_path(@book) do %><%= @book.title %><% end %></td>
+          <td><%= @book.opinion %></td>
+          <td></td>
+          <td>  <% if @book.user == current_user %>
+    <%= link_to "destroy", book_path(@book),class:'btn btn-sm btn-danger', method: :delete %>
+  <% end %></td>
+        </tr>
+      </tbody></table>
+    </div>
