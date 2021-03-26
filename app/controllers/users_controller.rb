@@ -10,7 +10,9 @@ class UsersController < ApplicationController
     redirect_to user_path(@user.id)
   end
   def index
+    @user = User.find(current_user.id)
     @users = User.all
+    @book = Book.new
   end
   
   def show
