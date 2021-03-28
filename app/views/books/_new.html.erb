@@ -5,8 +5,8 @@
   <%= form.text_field :title, class:"form-control book_title" %>
   </div>
   <div class="form-group">
-  <%= form.label :opinion, for:"book_opinion" %>
-  <%= form.text_area :opinion, class:"form-control book_opinion" %>
+  <label for:"book_opinion">Opinion</label>
+  <%= form.text_area :body, class:"form-control book_opinion" %>
   </div>
   <div class="form-group">
   <%= form.submit 'Create Book', class:"btn btn-success"%>

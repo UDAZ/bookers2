@@ -6,7 +6,7 @@
             <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no-image-icon.jpg" %><br>
          </td>
           <td><%= link_to book_path(@book) do %><%= @book.title %><% end %></td>
-          <td><%= @book.opinion %></td>
+          <td><%= @book.body %></td>
           <td></td>
           <td>  <% if @book.user == current_user %>
     <%= link_to "destroy", book_path(@book),class:'btn btn-sm btn-danger', method: :delete %>
